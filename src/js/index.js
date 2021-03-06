@@ -35,13 +35,17 @@ function songName () {
     for (var i = 0; i < len; i++) {
         if (str[i].charCodeAt() > 255) {
             count++;
+            console.log(nameLen);
         }
     }
     nameLen = len + count;
+    console.log(nameLen);
     if (nameLen > 30) {
         $SongName.css({
             'animation': 'songNameRuning 10s cubic-bezier(0, 0, 1, 1) alternate infinite'
         })
+        console.log(nameLen)
+
     } else {
         $SongName.css({
             'transform': 'translate3d(1%, 0px, 0px)'
@@ -426,7 +430,7 @@ function bindEvent() {
 
             //将列表移到屏幕下方
             $('.list').find('.list-top').css({
-                'transform': ' translate3d(-50%, 50%, 0)',
+                'transform': ' translate3d(-50%, 70%, 0)',
             });
 
             //等列表退回原位才取消列表的样式
