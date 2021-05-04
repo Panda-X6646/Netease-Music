@@ -70,6 +70,7 @@ function getData(url) {
 
             // 初始化渲染图片和背景高斯模糊
             root.rendering(data, currSongIndex);
+            
             // 初始化歌曲
             audio.getAudio(data[currSongIndex].audio)
 
